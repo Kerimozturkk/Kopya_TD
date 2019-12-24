@@ -1,4 +1,5 @@
 # Kopya_TD
+![Kopya_TD_classD](https://user-images.githubusercontent.com/49280604/71390048-c9c95000-260f-11ea-89f1-0d4e2bedfb54.png)
 Prototype tasarım paterni, büyük veri hacmine sahip nesneleri 
 new operatörü kullanmaksızın, 'klonlama' yöntemi ile oluşturan 
 bir tasarım desenidir. Bellekte sahip olduğu veri miktarı büyük, 
