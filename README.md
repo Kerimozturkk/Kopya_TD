@@ -5,37 +5,37 @@ bir tasarım desenidir. Bellekte sahip olduğu veri miktarı büyük,
 maliyetli ve zaman alıcı nesnelerin oluşturulması için kullanılan 
 Prototype, bir abstract sınıf veya interface'den oluşturulabilmektedir. 
 
-public abstract class DatabasePrototype implements Cloneable {
+	public abstract class DatabasePrototype implements Cloneable {
 
-   private String corporate;
-   private String name;
-   private int port;
-   
-   public String getCorporate() {
-      return corporate;
-   }
-   public void setCorporate(String corporate) {
-      this.corporate = corporate;
-   }
-   public String getName() {
-      return name;
-   }
-   public void setName(String name) {
-      this.name = name;
-   }
-   public int getPort() {
-      return port;
-   }
-   public void setPort(int port) {
-      this.port = port;
-   }
-   public Object clone() throws CloneNotSupportedException {
-      return super.clone();
-   }
-   public String toString() {
-      return "[Corporate=" + getCorporate() + ",Name=" + getName() + ",Port=" + getPort() + "]";
-   }
-} 
+	   private String corporate;
+	   private String name;
+	   private int port;
+
+	   public String getCorporate() {
+	      return corporate;
+	   }
+	   public void setCorporate(String corporate) {
+	      this.corporate = corporate;
+	   }
+	   public String getName() {
+	      return name;
+	   }
+	   public void setName(String name) {
+	      this.name = name;
+	   }
+	   public int getPort() {
+	      return port;
+	   }
+	   public void setPort(int port) {
+	      this.port = port;
+	   }
+	   public Object clone() throws CloneNotSupportedException {
+	      return super.clone();
+	   }
+	   public String toString() {
+	      return "[Corporate=" + getCorporate() + ",Name=" + getName() + ",Port=" + getPort() + "]";
+	   }
+	} 
 Prototype sınıfında, veritabanı adı, şirketi ve hangi port üzerinde 
 çalışacağı bilgileri yer almaktadır. Bu verilerin getter()/setter() 
 metotları dışında tanımlanan clone() metodu ise, Java Object sınıfı 
@@ -44,18 +44,18 @@ klonu oluşturulabilir. Object clone() metodu ise olusturulan yeni metodun ana �
 desteklememesi durumunda hata fırlatıcatır. toString metodu ise tüm özelliklerin nasıl
 yazdırılacağını bize gösterir.
 
-public class DB2 extends DatabasePrototype {
+	public class DB2 extends DatabasePrototype {
 
-   public DB2() {
-      setCorporate("IBM");
-      setName("DB2");
-      setPort(1233);
-   }
-}
+	   public DB2() {
+	      setCorporate("IBM");
+	      setName("DB2");
+	      setPort(1233);
+	   }
+	}
 DatabasePrototype sınıfından türetilen bu 3 sınıf, aldıkları bu özellikleri bünyelerinde 
 tutacakları değer ile set etmektedirler.Üç sınıfında yapısı aynıdır.
 
-public static void main(String[] args) {
+		public static void main(String[] args) {
 		 DatabasePrototype sql = new SqlServer();
 	      System.out.println(sql.toString());
 	      System.out.println(sql.hashCode());
